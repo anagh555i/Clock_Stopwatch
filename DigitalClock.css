@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    color: rgb(4, 234, 247);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 40px;
+    /*background-color: rgb(61, 61, 61);*/
+    background: linear-gradient(45deg ,rgb(8, 42, 105), rgb(80, 80, 96));
+}
+.container{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    border: none;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 5px rgb(6, 44, 66)
+                ,inset -5px -5px 5px rgb(38, 83, 127);
+    transition:box-shadow 1s ease-in-out;
+    animation: colorchange 5s infinite;
+}
+
+.container:hover{
+    color: rgb(0, 242, 255);
+    box-shadow: 5px 5px 5px rgb(6, 44, 66)
+                , -5px -5px 5px rgb(38, 83, 127);
+}
+
+/* stop watch special */
+
+button{
+    background: linear-gradient(45deg ,rgb(8, 42, 105), rgb(80, 80, 96));
+    border: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px rgb(6, 44, 66)
+                , -2px -2px 2px rgb(38, 83, 127);
+}
+
+button:hover{
+    color: white;
+    box-shadow:inset 2px 2px 2px rgb(6, 44, 66)
+                ,inset -2px -2px 2px rgb(38, 83, 127);
+}
+
+#start{
+    color: rgb(142, 252, 142);
+}
+#stop{
+    color: rgb(240, 116, 116);
+}
+#reset{
+    color:rgb(134, 134, 253);
+}
+
+#start:hover{
+    color: rgb(0, 255, 0);
+}
+#stop:hover{
+    color: rgb(255, 0, 0);
+}
+#reset:hover{
+    color:rgb(0, 102, 255);
+}
+
+@keyframes colorchange {
+    0%{
+        color: white;
+    }
+    50%{
+        color: rgb(133, 253, 255);
+    }
+    100%{
+        color: white;
+    }
+}
